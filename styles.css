@@ -429,10 +429,12 @@ body {
   display: flex;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
+  width: 100%;
 }
 
 .carousel-chip {
   flex: 0 0 100%;
+  min-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -442,6 +444,7 @@ body {
   border: 1.5px solid var(--border);
   border-radius: var(--radius);
   text-align: center;
+  box-sizing: border-box;
 }
 
 .chip-icon {

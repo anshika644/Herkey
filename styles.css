@@ -50,17 +50,13 @@ body {
   text-transform: uppercase;
 }
 
-.logo-title {
-  margin: 2px 0 4px;
-  font-family: "Chillax", "Poppins", sans-serif;
-  font-size: clamp(1.75rem, 3.8vw, 2.45rem);
-  line-height: 1;
-}
-
-.logo-subtitle {
-  margin: 0;
-  font-size: 0.92rem;
-  opacity: 0.95;
+.partnership-logo {
+  margin-top: 6px;
+  display: block;
+  width: clamp(280px, 54vw, 520px);
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .offer-pill {

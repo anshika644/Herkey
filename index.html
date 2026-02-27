@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HerFuture Salary Calculator | Simplilearn x Herkey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-area">
+        <span class="logo-text">HerFuture</span>
+        <span class="logo-sub">by Simplilearn × Herkey</span>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 class="hero-title">Discover Your <span class="highlight">Salary Potential</span></h1>
+      <p class="hero-subtitle">Upskill with India's most affordable professional courses and unlock higher-paying roles.</p>
+
+      <div class="price-badge">
+        <span class="price-old">₹40,000</span>
+        <span class="price-arrow">→</span>
+        <span class="price-new">₹10,000</span>
+        <span class="price-label">All Courses Included</span>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="calculator-section">
+      <h2 class="section-title">Calculate Your Future Salary</h2>
+
+      <form id="salaryForm" class="salary-form" autocomplete="off">
+        <div class="form-group">
+          <label for="experience">Years of Experience</label>
+          <div class="select-wrapper">
+            <select id="experience" required>
+              <option value="" disabled selected>Select experience</option>
+              <option value="0">Fresher (0 years)</option>
+              <option value="1">1 year</option>
+              <option value="2">2 years</option>
+              <option value="3">3 years</option>
+              <option value="4">4 years</option>
+              <option value="5">5 years</option>
+              <option value="6">6-8 years</option>
+              <option value="9">9-12 years</option>
+              <option value="13">13-15 years</option>
+              <option value="16">16+ years</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="currentRole">Current / Last Job Role</label>
+          <input type="text" id="currentRole" placeholder="e.g. Software Developer, Marketing Executive" required />
+        </div>
+
+        <div class="form-group">
+          <label for="targetRole">Target Role After Upskilling</label>
+          <input type="text" id="targetRole" placeholder="e.g. Data Scientist, Cloud Architect" required />
+        </div>
+
+        <button type="submit" class="cta-btn" id="calculateBtn">
+          <span class="btn-text">Calculate My Salary</span>
+          <span class="btn-icon">→</span>
+        </button>
+      </form>
+
+      <!-- Results Panel -->
+      <div id="resultsPanel" class="results-panel hidden">
+        <div class="results-header">
+          <h3>Your Salary Estimate</h3>
+        </div>
+        <div class="results-body">
+          <div class="salary-card current">
+            <span class="salary-label">Current Estimated Salary</span>
+            <span class="salary-value" id="currentSalary">—</span>
+            <span class="salary-role" id="currentRoleDisplay"></span>
+          </div>
+          <div class="salary-arrow-container">
+            <div class="salary-arrow-line"></div>
+            <div class="salary-arrow-badge">After Upskilling</div>
+          </div>
+          <div class="salary-card target">
+            <span class="salary-label">Potential Salary</span>
+            <span class="salary-value" id="targetSalary">—</span>
+            <span class="salary-role" id="targetRoleDisplay"></span>
+          </div>
+          <div class="salary-hike" id="salaryHike"></div>
+        </div>
+        <div class="results-disclaimer">
+          <p>Estimates based on current Indian market data. Actual salaries may vary by company &amp; location.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Included (moved after disclaimer per user request) -->
+    <section class="courses-section" id="coursesSection">
+      <h2 class="section-title">Courses Included</h2>
+      <p class="courses-subtitle">Get access to <strong>all</strong> of these professional domains</p>
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- chips injected by JS -->
+        </div>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bottom-cta">
+      <a href="#" class="cta-btn cta-btn-large">
+        <span class="btn-text">Enroll Now at ₹10,000</span>
+        <span class="btn-icon">→</span>
+      </a>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 HerFuture — A Simplilearn × Herkey Initiative</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

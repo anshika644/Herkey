@@ -2,13 +2,8 @@
 
 ## Cursor Cloud specific instructions
 
-This repository ("Herkey Lead magnets") is currently a bare/empty project with only a `README.md`. There is no application code, no package manager, no build system, and no services to run.
+This repository contains the HerFuture Salary Calculator lead magnet — a static single-page HTML application.
 
-- **No dependencies to install** — no `package.json`, `requirements.txt`, or equivalent exists.
-- **No services to start** — no backend, frontend, or database configuration is present.
+- **No dependencies to install** — open `index.html` directly in a browser.
+- **How to run** — open `index.html` in a web browser, or serve with any static file server (e.g. `python -m http.server 8000`).
 - **No lint, test, or build commands** — none are configured.
-
-When application code is added in the future, this section should be updated with:
-- The package manager and install command
-- How to run lint, tests, and the dev server
-- Any non-obvious setup caveats

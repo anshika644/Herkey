@@ -164,6 +164,97 @@ function calculateSalary(experience, currentRole, targetRole) {
   return { currentSalary, targetSalary, hike };
 }
 
+/* ===== Role Dropdown Groups ===== */
+const ROLE_GROUPS = [
+  {
+    label: "Software & Engineering",
+    roles: [
+      "Software Developer", "Software Engineer", "Frontend Developer",
+      "Backend Developer", "Full Stack Developer", "Web Developer",
+      "Mobile Developer", "Android Developer", "iOS Developer",
+      "Blockchain Developer",
+    ],
+  },
+  {
+    label: "Data & Analytics",
+    roles: [
+      "Data Scientist", "Data Analyst", "Data Engineer",
+      "Business Analyst", "Big Data Engineer", "Hadoop Developer",
+      "ETL Developer", "Power BI Developer", "Tableau Developer",
+    ],
+  },
+  {
+    label: "AI & Machine Learning",
+    roles: [
+      "AI Engineer", "Machine Learning Engineer",
+      "Generative AI Engineer", "Prompt Engineer",
+    ],
+  },
+  {
+    label: "Cloud, DevOps & Security",
+    roles: [
+      "Cloud Engineer", "Cloud Architect", "DevOps Engineer",
+      "Cyber Security Analyst", "Security Engineer", "Penetration Tester",
+      "System Administrator",
+    ],
+  },
+  {
+    label: "Marketing",
+    roles: [
+      "Digital Marketing Manager", "Marketing Manager",
+      "Marketing Executive", "SEO Specialist",
+      "Content Marketer", "Social Media Manager",
+    ],
+  },
+  {
+    label: "Management & Leadership",
+    roles: [
+      "Project Manager", "Product Manager", "Scrum Master",
+      "Agile Coach", "IT Manager", "Operations Manager",
+      "Solutions Architect", "Technical Lead", "Engineering Manager",
+    ],
+  },
+  {
+    label: "Quality Assurance",
+    roles: [
+      "QA Engineer", "Quality Analyst", "Test Engineer",
+    ],
+  },
+  {
+    label: "Other",
+    roles: [
+      "HR Executive", "Fresher", "Intern", "Trainee",
+    ],
+  },
+];
+
+function populateRoleDropdowns() {
+  const currentSelect = document.getElementById("currentRole");
+  const targetSelect = document.getElementById("targetRole");
+
+  ROLE_GROUPS.forEach((group) => {
+    const optGroupCurrent = document.createElement("optgroup");
+    optGroupCurrent.label = group.label;
+    const optGroupTarget = document.createElement("optgroup");
+    optGroupTarget.label = group.label;
+
+    group.roles.forEach((role) => {
+      const optCurrent = document.createElement("option");
+      optCurrent.value = role;
+      optCurrent.textContent = role;
+      optGroupCurrent.appendChild(optCurrent);
+
+      const optTarget = document.createElement("option");
+      optTarget.value = role;
+      optTarget.textContent = role;
+      optGroupTarget.appendChild(optTarget);
+    });
+
+    currentSelect.appendChild(optGroupCurrent);
+    targetSelect.appendChild(optGroupTarget);
+  });
+}
+
 /* ===== Carousel ===== */
 function initCarousel() {
   const track = document.getElementById("carouselTrack");
@@ -253,6 +344,7 @@ function initForm() {
 
 /* ===== Init ===== */
 document.addEventListener("DOMContentLoaded", () => {
+  populateRoleDropdowns();
   initCarousel();
   initForm();
 });

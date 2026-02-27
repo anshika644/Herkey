@@ -1,0 +1,24 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HerFuture logo">
+  <defs>
+    <linearGradient id="g1" x1="18" y1="22" x2="102" y2="104" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#935073"/>
+      <stop offset="1" stop-color="#87C05A"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.35 0" />
+      <feBlend in2="SourceGraphic" mode="normal"/>
+    </filter>
+  </defs>
+
+  <circle cx="60" cy="60" r="48" fill="url(#g1)" filter="url(#soft)"/>
+  <circle cx="60" cy="60" r="47" stroke="rgba(255,255,255,0.45)" stroke-width="1.6"/>
+
+  <!-- HF monogram -->
+  <path d="M39 78V42H48.5V56.5H63V42H72.5V78H63V64H48.5V78H39Z" fill="rgba(0,0,0,0.72)"/>
+  <path d="M77.5 78V42H101V50.5H87V57.8H99.2V66H87V78H77.5Z" fill="rgba(0,0,0,0.72)"/>
+</svg>

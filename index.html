@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="HerFuture Salary Calculator — estimate practical salary potential after upskilling with Simplilearn (HerKey partnership offer)."
+    />
+    <title>HerFuture Salary Calculator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=chillax@400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="brand">
+          <img class="brand__logo" src="./assets/herfuture_logo.svg" alt="HerFuture" />
+          <div class="brand__meta">
+            <div class="brand__title">Salary Calculator</div>
+            <div class="brand__subtitle">
+              HerFuture partnership offer with Simplilearn × HerKey
+            </div>
+          </div>
+        </div>
+
+        <div class="offer">
+          <div class="offer__pill">
+            <span class="offer__label">Program fee</span>
+            <span class="offer__price">₹10,000</span>
+            <span class="offer__sep">•</span>
+            <span class="offer__market">Market ₹40,000</span>
+          </div>
+          <div class="offer__note">Upskill across multiple in-demand domains (included).</div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="card">
+          <div class="card__header">
+            <h1 class="card__title">Estimate your practical salary potential</h1>
+            <p class="card__desc">
+              Enter your experience and roles. You’ll get a realistic India-market salary range
+              aligned to your target role after upskilling.
+            </p>
+          </div>
+
+          <form id="salaryForm" class="form" autocomplete="on" novalidate>
+            <div class="form__grid">
+              <label class="field">
+                <span class="field__label">Years of experience</span>
+                <select id="experience" name="experience" class="field__control" required>
+                  <option value="" selected disabled>Select experience</option>
+                  <option value="0-1">0–1</option>
+                  <option value="1-3">1–3</option>
+                  <option value="3-5">3–5</option>
+                  <option value="5-8">5–8</option>
+                  <option value="8-12">8–12</option>
+                  <option value="12-15">12–15</option>
+                  <option value="15+">15+</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span class="field__label">Current / last job role</span>
+                <input
+                  id="currentRole"
+                  name="currentRole"
+                  class="field__control"
+                  placeholder="e.g., QA Engineer, Marketing Executive, Analyst"
+                  required
+                />
+              </label>
+
+              <label class="field">
+                <span class="field__label">Target role</span>
+                <input
+                  id="targetRole"
+                  name="targetRole"
+                  class="field__control"
+                  placeholder="e.g., Data Analyst, Product Manager, Cloud Engineer"
+                  required
+                />
+              </label>
+            </div>
+
+            <div class="form__actions">
+              <button id="cta" class="cta" type="submit">
+                Get my salary estimate
+              </button>
+              <div class="form__microcopy">
+                Price shown is the partnership offer (₹10,000) vs typical market pricing (₹40,000).
+              </div>
+            </div>
+          </form>
+
+          <div id="result" class="result" hidden aria-live="polite"></div>
+
+          <div class="disclaimer">
+            Estimates based on current Indian market data. Actual salaries may vary by company &
+            location.
+          </div>
+
+          <section class="included">
+            <div class="included__title">Courses included (domains)</div>
+            <div class="carousel" aria-label="Included course domains (auto-scrolling)">
+              <div id="carouselTrack" class="carousel__track"></div>
+            </div>
+            <div class="included__hint">All domains are included; nothing to select.</div>
+          </section>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__text">
+          This is an indicative calculator for guidance only.
+        </div>
+      </footer>
+    </div>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

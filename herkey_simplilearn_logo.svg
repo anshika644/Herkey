@@ -1,0 +1,50 @@
+<svg
+  width="780"
+  height="146"
+  viewBox="0 0 780 146"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-labelledby="logoTitle logoDesc"
+>
+  <title id="logoTitle">HerKey and Simplilearn partnership logo</title>
+  <desc id="logoDesc">
+    Wordmark logo with herkey in purple and green, divider, and simplilearn in
+    orange and blue.
+  </desc>
+  <rect width="780" height="146" fill="white" />
+  <text
+    x="24"
+    y="98"
+    fill="#935073"
+    font-family="Poppins, Arial, sans-serif"
+    font-size="82"
+    font-weight="500"
+    letter-spacing="-1.6"
+  >
+    herke
+  </text>
+  <text
+    x="251"
+    y="98"
+    fill="#87C05A"
+    font-family="Poppins, Arial, sans-serif"
+    font-size="82"
+    font-weight="500"
+    letter-spacing="-1.2"
+  >
+    y
+  </text>
+  <rect x="334" y="18" width="4" height="110" rx="2" fill="#666666" />
+  <text
+    x="360"
+    y="98"
+    font-family="Poppins, Arial, sans-serif"
+    font-size="82"
+    font-weight="500"
+    letter-spacing="-2"
+  >
+    <tspan fill="#F4A11A">simpli</tspan>
+    <tspan fill="#1E8CC8">learn</tspan>
+  </text>
+</svg>

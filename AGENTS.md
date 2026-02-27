@@ -2,13 +2,26 @@
 
 ## Cursor Cloud specific instructions
 
-This repository ("Herkey Lead magnets") is currently a bare/empty project with only a `README.md`. There is no application code, no package manager, no build system, and no services to run.
+This repository now contains a static frontend lead magnet app:
 
-- **No dependencies to install** — no `package.json`, `requirements.txt`, or equivalent exists.
-- **No services to start** — no backend, frontend, or database configuration is present.
-- **No lint, test, or build commands** — none are configured.
+- `index.html`
+- `styles.css`
+- `script.js`
 
-When application code is added in the future, this section should be updated with:
-- The package manager and install command
-- How to run lint, tests, and the dev server
-- Any non-obvious setup caveats
+### Environment setup
+
+- **No dependencies to install** — no package manager files are present.
+- **No backend or database services** — this is a static HTML/CSS/JS app.
+
+### Running locally
+
+- Open `index.html` directly in a browser, or
+- Serve the repository as static files (optional), for example:
+  - `python3 -m http.server 4173`
+
+### Testing guidance
+
+- There is no configured lint/test/build command.
+- Validate behavior through manual browser testing:
+  - form validation and salary estimate rendering
+  - auto-scrolling one-chip course carousel

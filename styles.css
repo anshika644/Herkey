@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=chillax@500,600,700&display=swap");
+
+:root {
+  --viva-forza: #935073;
+  --viva-energia: #87c05a;
+  --ink: #241520;
+  --surface: #fff8fd;
+  --card: #ffffff;
+  --muted: #6f6170;
+  --stroke: #e5d6e4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top, #f7ecf4 0%, #f3f8eb 52%, #f7f3f9 100%);
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.app-shell {
+  width: min(1024px, 100%);
+}
+
+.brand-strip {
+  background: linear-gradient(120deg, rgba(147, 80, 115, 0.96), rgba(123, 60, 95, 0.95));
+  color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 20px 40px rgba(87, 34, 63, 0.24);
+}
+
+.logo-overline {
+  margin: 0;
+  opacity: 0.86;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.logo-title {
+  margin: 2px 0 4px;
+  font-family: "Chillax", "Poppins", sans-serif;
+  font-size: clamp(1.75rem, 3.8vw, 2.45rem);
+  line-height: 1;
+}
+
+.logo-subtitle {
+  margin: 0;
+  font-size: 0.92rem;
+  opacity: 0.95;
+}
+
+.offer-pill {
+  margin: 0;
+  min-width: 220px;
+  display: grid;
+  gap: 3px;
+  text-align: right;
+  font-size: 0.86rem;
+}
+
+.offer-pill strong {
+  font-size: 1.42rem;
+  line-height: 1.2;
+}
+
+.offer-pill small {
+  opacity: 0.9;
+}
+
+.calculator-panel {
+  margin-top: 16px;
+  background: var(--surface);
+  border: 1px solid var(--stroke);
+  border-radius: 20px;
+  padding: clamp(18px, 3vw, 28px);
+}
+
+.intro-copy h2 {
+  font-family: "Chillax", "Poppins", sans-serif;
+  margin: 0;
+  font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+  color: var(--viva-forza);
+}
+
+.intro-copy p {
+  margin: 8px 0 0;
+  color: #4e3f4d;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.salary-form {
+  display: grid;
+  gap: 10px;
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.salary-form label {
+  font-weight: 600;
+  color: #4f3b4c;
+  font-size: 0.92rem;
+}
+
+.salary-form input,
+.salary-form select {
+  width: 100%;
+  border: 1px solid #cfbccd;
+  border-radius: 10px;
+  padding: 11px 12px;
+  font: inherit;
+  color: var(--ink);
+  background-color: #fff;
+}
+
+.salary-form input:focus,
+.salary-form select:focus {
+  outline: none;
+  border-color: var(--viva-forza);
+  box-shadow: 0 0 0 3px rgba(147, 80, 115, 0.16);
+}
+
+.cta-button {
+  margin-top: 4px;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: var(--viva-energia);
+  color: #1b300c;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(104, 152, 62, 0.35);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+.form-error {
+  margin: 4px 0 0;
+  color: #b00020;
+  font-size: 0.88rem;
+}
+
+.estimate-card {
+  background: #fff;
+  border: 1px solid #ddc9db;
+  border-radius: 16px;
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.estimate-card h3 {
+  margin: 0;
+  color: var(--viva-forza);
+  font-size: 1.15rem;
+}
+
+.range-line,
+.uplift-line,
+.estimate-footnote {
+  margin: 0;
+}
+
+.range-line strong {
+  display: block;
+  margin-top: 2px;
+  font-size: 1.13rem;
+}
+
+.uplift-line {
+  background: #eff8e7;
+  border-left: 4px solid var(--viva-energia);
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.estimate-footnote {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.market-note {
+  margin: 16px 0 0;
+  font-size: 0.9rem;
+  color: #5e4a5a;
+}
+
+.courses-section {
+  margin-top: 14px;
+  background: #ffffff;
+  border: 1px solid #e4d4e3;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.courses-header h3 {
+  margin: 0;
+  color: var(--viva-forza);
+}
+
+.courses-header p {
+  margin: 5px 0 0;
+  color: #5d4f5b;
+}
+
+.chip-carousel {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chip-viewport {
+  overflow: hidden;
+  border: 1px dashed #d3c0d2;
+  border-radius: 999px;
+  width: min(450px, 100%);
+  margin: 0 auto;
+  background: #fbf8fb;
+}
+
+.chip-track {
+  display: flex;
+  transition: transform 0.45s ease;
+}
+
+.chip-slide {
+  min-width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+}
+
+.course-chip {
+  border-radius: 999px;
+  border: 1px solid #ceb7cc;
+  background: #fff;
+  color: #4f3c4d;
+  font-weight: 600;
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+
+.chip-nav {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #d6bfd4;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--viva-forza);
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.chip-nav:hover {
+  border-color: #c79dc2;
+  background: #fdf7fc;
+}
+
+.chip-index {
+  margin: 10px 0 0;
+  text-align: center;
+  color: #715c70;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 840px) {
+  body {
+    padding: 12px;
+  }
+
+  .brand-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .offer-pill {
+    text-align: left;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chip-viewport {
+    width: 100%;
+  }
+}

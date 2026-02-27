@@ -2,26 +2,9 @@
 
 ## Cursor Cloud specific instructions
 
-This repository now contains a static frontend lead magnet app:
+This repository ("Herkey Lead magnets") contains a static single-page salary calculator web app built with vanilla HTML, CSS, and JavaScript.
 
-- `index.html`
-- `styles.css`
-- `script.js`
-
-### Environment setup
-
-- **No dependencies to install** — no package manager files are present.
-- **No backend or database services** — this is a static HTML/CSS/JS app.
-
-### Running locally
-
-- Open `index.html` directly in a browser, or
-- Serve the repository as static files (optional), for example:
-  - `python3 -m http.server 4173`
-
-### Testing guidance
-
-- There is no configured lint/test/build command.
-- Validate behavior through manual browser testing:
-  - form validation and salary estimate rendering
-  - auto-scrolling one-chip course carousel
+- **No dependencies to install** — the app uses no build tools or package managers. All assets are loaded via CDN (Google Fonts) or inline.
+- **Dev server**: Run `python3 -m http.server 8080` from the repository root, then open `http://localhost:8080/` in a browser.
+- **No lint or test commands** — none are configured. Manual browser testing is the primary testing method.
+- **Files**: `index.html` (markup), `styles.css` (styling), `app.js` (carousel, salary logic, form handling).
